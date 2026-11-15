@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "if [ -n \"$CLAUDE_ENV_FILE\" ]; then echo 'export DISABLE_TELEMETRY=1' >> \"$CLAUDE_ENV_FILE\"; fi; exit 0"
+          }
+        ]
+      }
+    ]
+  }
+}
